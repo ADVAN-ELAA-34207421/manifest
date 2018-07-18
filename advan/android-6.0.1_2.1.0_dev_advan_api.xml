@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="advantech-github" 
+           fetch="https://github.com/ADVANTECH-Corp/" />
+  <remote name="advantech_risc-github"
+           fetch="https://github.com/ADVAN-ELAA-34207421/" />
+
+<!-- Advantech RISC Devices Kernel and U-Boot -->
+  <project remote="advantech-github" name="uboot-imx6" path="bootable/bootloader/uboot-imx" revision="imx_v2015.04_4.1.15_1.0.0_ga"/>
+  <project remote="advantech-github" name="linux-imx6" path="kernel_imx" revision="imx_4.1.15_1.0.0_ga"/>
+
+<!-- Advantech RISC Devices Kernel and U-Boot Patch file-->
+  <project remote="advantech-github" name="Android_Patch" path="patches_android_6.0.1" revision="android_6.0.1_2.1.0"/>
+
+<!-- Advantech RISC Android code -->
+  <project remote="advantech-github" name="android_risc_build" path="build" revision="android-6.0.1_r22">
+  <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project remote="advantech-github" name="android_risc_bionic" path="bionic" revision="android-6.0.1_r22"/>
+  <project remote="advantech-github" name="android_risc_bootable" path="bootable" revision="android-6.0.1_r22"/>
+  <project remote="advantech-github" name="android_risc_device" path="device" revision="android-6.0.1_r22"/>
+  <project remote="advantech-github" name="android_risc_hardware" path="hardware" revision="android-6.0.1_r22"/>
+  <project remote="advantech-github" name="android_risc_libcore" path="libcore" revision="android-6.0.1_r22"/>
+  <project remote="advantech-github" name="android_risc_packages" path="packages" revision="android-6.0.1_r22_api"/>
+  <project remote="advantech-github" name="android_risc_system" path="system" revision="android-6.0.1_r22"/>
+  <project remote="advantech-github" name="android_risc_external" path="external" revision="android-6.0.1_r22"/>
+  <project remote="advantech-github" name="android_risc_frameworks" path="frameworks" revision="android-6.0.1_r22_api"/>
+  <project remote="advantech-github" name="android_risc_prebuilts" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="android-6.0.1_r22"/>
+
+<!-- Android Source Code from Google Unchanged AOSP project--> 
+  <project remote="advantech_risc-github" path="abi/cpp" name="abi_cpp" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="art" name="art" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="cts" name="cts" groups="cts,pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="dalvik" name="dalvik" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="developers/build" name="developers_build" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="developers/demos" name="developers_demos" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="developers/docs" name="developers_docs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="developers/samples/android" name="developers_samples_android" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="development" name="development" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="docs/source.android.com" name="docs_source.android.com" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/aac" name="external_aac" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/android-clat" name="external_android-clat" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/android-mock" name="external_android-mock" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/androidplot" name="external_androidplot" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/ant-glob" name="external_ant-glob" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/antlr" name="external_antlr" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/apache-commons-math" name="external_apache-commons-math" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/apache-harmony" name="external_apache-harmony" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/apache-http" name="external_apache-http" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/apache-xml" name="external_apache-xml" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/bison" name="external_bison" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/blktrace" name="external_blktrace" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/boringssl" name="external_boringssl" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/bouncycastle" name="external_bouncycastle" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/bsdiff" name="external_bsdiff" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/bzip2" name="external_bzip2" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/cblas" name="external_cblas" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/ceres-solver" name="external_ceres-solver" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/chromium-libpac" name="external_chromium-libpac" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/chromium-trace" name="external_chromium-trace" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/chromium-webview" name="external_chromium-webview" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/clang" name="external_clang" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/cmockery" name="external_cmockery" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/compiler-rt" name="external_compiler-rt" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/conscrypt" name="external_conscrypt" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/crcalc" name="external_crcalc" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/deqp" name="external_deqp" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/dexmaker" name="external_dexmaker" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/dhcpcd" name="external_dhcpcd" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/doclava" name="external_doclava" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/donuts" name="external_donuts" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/drm_gralloc" name="external_drm_gralloc" groups="drm_gralloc" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/drm_hwcomposer" name="external_drm_hwcomposer" groups="drm_hwcomposer" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/droiddriver" name="external_droiddriver" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/e2fsprogs" name="external_e2fsprogs" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/easymock" name="external_easymock" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/eclipse-basebuilder" name="external_eclipse-basebuilder" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/eclipse-windowbuilder" name="external_eclipse-windowbuilder" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/eigen" name="external_eigen" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/elfutils" name="external_elfutils" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/embunit" name="external_embunit" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/emma" name="external_emma" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/esd" name="external_esd" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/expat" name="external_expat" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/eyes-free" name="external_eyes-free" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/f2fs-tools" name="external_f2fs-tools" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/fdlibm" name="external_fdlibm" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/fio" name="external_fio" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/flac" name="external_flac" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/fonttools" name="external_fonttools" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/freetype" name="external_freetype" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/fsck_msdos" name="external_fsck_msdos" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/giflib" name="external_giflib" groups="pdk,qcom_msm8x26" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/glide" name="external_glide" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/google-breakpad" name="external_google-breakpad" groups="dragon" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/google-fonts/carrois-gothic-sc" name="external_google-fonts_carrois-gothic-sc" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/google-fonts/coming-soon" name="external_google-fonts_coming-soon" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/google-fonts/cutive-mono" name="external_google-fonts_cutive-mono" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/google-fonts/dancing-script" name="external_google-fonts_dancing-script" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/google-tv-pairing-protocol" name="external_google-tv-pairing-protocol" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/gptfdisk" name="external_gptfdisk" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/gtest" name="external_gtest" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/guava" name="external_guava" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/hamcrest" name="external_hamcrest" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/harfbuzz_ng" name="external_harfbuzz_ng" groups="pdk,qcom_msm8x26" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/hyphenation-patterns" name="external_hyphenation-patterns" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/icu" name="external_icu" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/iproute2" name="external_iproute2" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/ipsec-tools" name="external_ipsec-tools" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/iptables" name="external_iptables" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/iputils" name="external_iputils" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jack" name="external_jack" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jarjar" name="external_jarjar" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/javasqlite" name="external_javasqlite" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/javassist" name="external_javassist" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jdiff" name="external_jdiff" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jemalloc" name="external_jemalloc" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jetty" name="external_jetty" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jhead" name="external_jhead" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jline" name="external_jline" groups="notdefault,tradefed" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jmdns" name="external_jmdns" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jmonkeyengine" name="external_jmonkeyengine" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jpeg" name="external_jpeg" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jsilver" name="external_jsilver" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jsmn" name="external_jsmn" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jsoncpp" name="external_jsoncpp" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/jsr305" name="external_jsr305" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/junit" name="external_junit" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/ksoap2" name="external_ksoap2" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libavc" name="external_libavc" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libcap-ng" name="external_libcap-ng" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libcxx" name="external_libcxx" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libcxxabi" name="external_libcxxabi" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libdrm" name="external_libdrm" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libedit" name="external_libedit" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libexif" name="external_libexif" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libgsm" name="external_libgsm" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libhevc" name="external_libhevc" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/liblzf" name="external_liblzf" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libmpeg2" name="external_libmpeg2" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libmtp" name="external_libmtp" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libnfc-nci" name="external_libnfc-nci" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libnfc-nxp" name="external_libnfc-nxp" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libnl" name="external_libnl" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libogg" name="external_libogg" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libopus" name="external_libopus" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libpcap" name="external_libpcap" groups="pdk,pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libphonenumber" name="external_libphonenumber" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libpng" name="external_libpng" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libseccomp-helper" name="external_libseccomp-helper" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libselinux" name="external_libselinux" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libssh2" name="external_libssh2" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libunwind" name="external_libunwind" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libusb" name="external_libusb" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libusb-compat" name="external_libusb-compat" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libutf" name="external_libutf" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libvncserver" name="external_libvncserver" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libvorbis" name="external_libvorbis" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libvpx" name="external_libvpx" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libvterm" name="external_libvterm" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libxml2" name="external_libxml2" groups="pdk-cw-fs,pdk-fs,libxml2" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/libyuv" name="external_libyuv" groups="libyuv,pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/linux-tools-perf" name="external_linux-tools-perf" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/littlemock" name="external_littlemock" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/lld" name="external_lld" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/lldb" name="external_lldb" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/llvm" name="external_llvm" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/ltrace" name="external_ltrace" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/lz4" name="external_lz4" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/lzma" name="external_lzma" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/marisa-trie" name="external_marisa-trie" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/markdown" name="external_markdown" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mdnsresponder" name="external_mdnsresponder" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mesa3d" name="external_mesa3d" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/messageformat" name="external_messageformat" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mksh" name="external_mksh" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mockftpserver" name="external_mockftpserver" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mockito" name="external_mockito" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mockwebserver" name="external_mockwebserver" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mp4parser" name="external_mp4parser" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/mtpd" name="external_mtpd" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/nanohttpd" name="external_nanohttpd" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/nanopb-c" name="external_nanopb-c" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/naver-fonts" name="external_naver-fonts" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/netcat" name="external_netcat" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/netperf" name="external_netperf" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/neven" name="external_neven" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/nfacct" name="external_nfacct" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/nist-pkits" name="external_nist-pkits" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/nist-sip" name="external_nist-sip" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/noto-fonts" name="external_noto-fonts" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/oauth" name="external_oauth" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/objenesis" name="external_objenesis" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/okhttp" name="external_okhttp" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/opencv" name="external_opencv" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/openfst" name="external_openfst" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/openssh" name="external_openssh" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/owasp/sanitizer" name="external_owasp_sanitizer" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/parameter-framework" name="external_parameter-framework" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/pcre" name="external_pcre" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/pdfium" name="external_pdfium" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/proguard" name="external_proguard" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/protobuf" name="external_protobuf" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/regex-re2" name="external_regex-re2" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/replicaisland" name="external_replicaisland" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/robolectric" name="external_robolectric" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/roboto-fonts" name="external_roboto-fonts" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/safe-iop" name="external_safe-iop" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/scrypt" name="external_scrypt" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/selinux" name="external_selinux" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/sepolicy" name="external_sepolicy" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/sfntly" name="external_sfntly" groups="pdk,qcom_msm8x26" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/slf4j" name="external_slf4j" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/smali" name="external_smali" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/sonic" name="external_sonic" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/sonivox" name="external_sonivox" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/speex" name="external_speex" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/sqlite" name="external_sqlite" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/squashfs-tools" name="external_squashfs-tools" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/srtp" name="external_srtp" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/strace" name="external_strace" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/svox" name="external_svox" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/tagsoup" name="external_tagsoup" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/tcpdump" name="external_tcpdump" groups="pdk,pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/timezonepicker-support" name="external_timezonepicker-support" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/tinycompress" name="external_tinycompress" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/tinyxml" name="external_tinyxml" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/tinyxml2" name="external_tinyxml2" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/toybox" name="external_toybox" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/tremolo" name="external_tremolo" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/v8" name="external_v8" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/valgrind" name="external_valgrind" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/vboot_reference" name="external_vboot_reference" groups="vboot" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/vixl" name="external_vixl" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/vogar" name="external_vogar" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/webp" name="external_webp" groups="pdk,qcom_msm8x26" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/webrtc" name="external_webrtc" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/xmlwriter" name="external_xmlwriter" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/xmp_toolkit" name="external_xmp_toolkit" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/zlib" name="external_zlib" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/zopfli" name="external_zopfli" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="external/zxing" name="external_zxing" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="libnativehelper" name="libnativehelper" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="ndk" name="ndk" groups="generic_fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="pdk" name="pdk" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="platform_testing" name="platform_testing" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/android-emulator" name="prebuilts_android-emulator" groups="pdk-fs" clone-depth="1" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/clang/darwin-x86/host/3.6" name="prebuilts_clang_darwin-x86_host_3.6" groups="pdk,darwin" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/clang/linux-x86/host/3.6" name="prebuilts_clang_linux-x86_host_3.6" groups="pdk,linux" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/devtools" name="prebuilts_devtools" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/eclipse" name="prebuilts_eclipse" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/eclipse-build-deps" name="prebuilts_eclipse-build-deps" groups="notdefault,eclipse" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/eclipse-build-deps-sources" name="prebuilts_eclipse-build-deps-sources" groups="notdefault,eclipse" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,darwin,arm" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" name="prebuilts_gcc_darwin-x86_arm_arm-eabi-4.8" groups="pdk,darwin,arm" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" groups="pdk,darwin,arm" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/darwin-x86/host/headers" name="prebuilts_gcc_darwin-x86_host_headers" groups="pdk,darwin" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="prebuilts_gcc_darwin-x86_host_i686-apple-darwin-4.2.1" groups="pdk,darwin" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" name="prebuilts_gcc_darwin-x86_mips_mips64el-linux-android-4.9" groups="pdk,darwin,mips" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" groups="pdk,darwin,x86" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" groups="pdk,linux,arm" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.11-4.8" groups="pdk,linux" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.15-4.8"  groups="pdk,linux" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="prebuilts_gcc_linux-x86_host_x86_64-w64-mingw32-4.8" groups="pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="prebuilts_gcc_linux-x86_mips_mips64el-linux-android-4.9" groups="pdk,linux,mips" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" groups="pdk,linux,x86" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/gradle-plugin" name="prebuilts_gradle-plugin" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/libs/libedit" name="prebuilts_libs_libedit" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/maven_repo/android" name="prebuilts_maven_repo_android" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/misc" name="prebuilts_misc" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/ndk" name="prebuilts_ndk" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/python/darwin-x86/2.7.5" name="prebuilts_python_darwin-x86_2.7.5" groups="darwin,pdk,pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/python/linux-x86/2.7.5" name="prebuilts_python_linux-x86_2.7.5" groups="linux,pdk,pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/qemu-kernel" name="prebuilts_qemu-kernel" groups="pdk" clone-depth="1" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/sdk" name="prebuilts_sdk" groups="pdk" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="prebuilts/tools" name="prebuilts_tools" groups="pdk,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="sdk" name="sdk" groups="pdk-cw-fs,pdk-fs" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/adt/eclipse" name="tools_adt_eclipse" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/adt/idea" name="tools_adt_idea" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/base" name="tools_base" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/build" name="tools_build" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/emulator" name="tools_emulator" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/external/fat32lib" name="tools_external_fat32lib" groups="tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/external/gradle" name="tools_external_gradle" groups="tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/idea" name="tools_idea" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/loganalysis" name="tools_loganalysis" groups="notdefault,tradefed" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/motodev" name="tools_motodev" groups="notdefault,motodev" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/studio/cloud" name="tools_studio_cloud" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/studio/translation" name="tools_studio_translation" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/swt" name="tools_swt" groups="notdefault,tools" revision="android-6.0.1_2.1.0"/>
+  <project remote="advantech_risc-github" path="tools/tradefederation" name="tools_tradefederation" groups="notdefault,tradefed" revision="android-6.0.1_2.1.0"/>
+
+</manifest>
